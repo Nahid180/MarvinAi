@@ -1,0 +1,16 @@
+{
+    "intents":[
+        {
+            "tag":"others",
+            "pattern":[]
+        },
+        {
+            "tag":"greetings",
+            "pattern":["hello","nice to meet you","hi","hola","what's up","hey"]
+        },
+        {
+            "tag":"goodbye",
+            "pattern":["bye","see you again later","good bye","end","ta ta","wellfare","farewell"]
+        }
+    ]
+}

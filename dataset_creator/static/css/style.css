@@ -1,0 +1,114 @@
+body{
+    background-color: #395B64;
+    color: white;
+}
+
+.textbox{
+
+    float: left;
+    width: 85%;
+    height: 17vh;
+    background-color: #1b1b24;
+}
+
+.form-control{
+    background-color: #2b2c32;
+    float: left; 
+    width: 87%;
+    border-color: #2b2c32;
+    color: white;
+}
+.form-control:focus{
+    background-color: #2b2c32;
+    border-color: #2b2c32;
+    color: white;
+}
+.topbar{
+    float: left;
+    width: 85%;
+    height: 9vh;
+    border-bottom: solid 1px #24252e;
+    background-color: #1b1b24;
+}
+.side-head{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 22pt;
+    margin-left: 10px;
+}
+.chat{
+    float: left; 
+    width: 85%; 
+    height: 74vh;
+    background-color: #1b1b24;
+    overflow-y: scroll;
+}
+.send{
+    margin-left: 10px;
+}
+.navbar-left{
+    float: left;
+    height:100vh;
+    width: 15%;
+    background-color: #2b2b36;
+}
+.items{
+    background-color: #2b2b36;
+    width: 100%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    color: white;
+    margin-top: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+.items:hover{
+    background-color: #3f3f5d;
+    transition: .5s;
+}
+.show-text{
+    margin-left: 20px;
+}
+.speak{
+    width: 100%;
+    height: max-content;
+    color: white;
+    padding: 5pt;
+    margin-top: 15px;
+    display: flex;
+    justify-content: right;
+}
+.reply{
+    width: 100%;
+    height: max-content;
+    color: white;
+    padding: 5pt;
+    text-align: left;
+    margin-top: 15px;
+}
+.text-speak{
+    color: white;
+    width: max-content;
+    height:auto;
+    text-align: right;
+    max-width: 70%;
+    margin-right: 10px;
+    padding: 5pt;
+    padding-left: 7pt;
+    padding-right: 7pt;
+    border-radius: 5pt;
+    background-color: #26272e;   
+}
+.text-reply{
+    color: white;
+    width: max-content;
+    height:auto;
+    text-align: right;
+    max-width: 70%;
+    padding: 5pt;
+    padding-left: 7pt;
+    padding-right: 7pt;
+    border-radius: 5pt;
+    margin-left: 10px;
+    background-color: #26272e;   
+}

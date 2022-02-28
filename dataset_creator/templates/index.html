@@ -18,16 +18,16 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <form action="/change-tag" method="post">
-                    <h3 style="color: black; text-align: center; margin-top: 30px;">Select a tag</h3><br>
-                    
-                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="tag">
-                        <option selected disabled>{{tag}}</option>
-                        <option value="Greetings">Greetings</option>
-                        <option value="how are you">How Are You</option>
-                        <option value="Good Bye">Good Bye</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
-                </form>
+                        <h3 style="color: black; text-align: center; margin-top: 30px;">Select a tag</h3><br>
+
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" name="tag">
+                            <option selected disabled>{{tag}}</option>
+                            <option value="Greetings">Greetings</option>
+                            <option value="how are you">How Are You</option>
+                            <option value="Good Bye">Good Bye</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -60,14 +60,17 @@
 
     </div>
     <div class="topbar">
-        <h2 style="color: white; margin-left: 20px; margin-top: 10px;">Marvin</h2>
+        <h2 style="color: white; margin-left: 20px; margin-top: 10px;">Marvin #{{tag}}</h2>
     </div>
-    <div class="chat">
+    <div class="chat" id="chat">
         {% for i in data %}
+        
         <div class="speak">
+            <div class="mini">{{i.tag}}</div>
             <div class="text-speak">{{i.speaker}}</div>
         </div>
         <div class="reply">
+            <div class="mini">{{i.tag}}</div>
             <div class="text-reply">{{i.reply}}</div>
         </div>
         {% endfor %}
@@ -88,6 +91,13 @@
             </form>
         </div>
     </div>
+    <script>
+        function scrollNow(){
+            var elem = document.getElementById('chat');
+            elem.scrollTop = elem.scrollHeight;
+        }
+        scrollNow();
+    </script>
     <script src="/static/js/bootstrap.js"></script>
     <script src="/static/css/bootstrap.min.css"></script>
 </body>

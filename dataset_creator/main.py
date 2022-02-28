@@ -5,7 +5,7 @@ import json
 
 app=Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:khan2019@localhost/marvin?charset=utf8mb4'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://nahid:khan2019@localhost/marvin?charset=utf8mb4'
 
 db=SQLAlchemy(app)
 
@@ -15,7 +15,7 @@ class Marvin(db.Model):
     reply=db.Column(db.Text)
     tag=db.Column(db.Text)
 
-with open('static/config.json','rb') as f:
+with open("G:\\MarvinAi\\dataset_creator\\static\\config.json",'rb') as f:
     file=json.load(f)
 
 @app.route('/')
@@ -28,6 +28,7 @@ def home():
 def change_tag():
     tag=request.form['tag']
     file['Tag']=tag
+    print(tag)
     with open("static/config.json",'w') as writer:
         json.dump(file,writer,indent=2)
     return redirect('/')

@@ -43,6 +43,7 @@ body{
     background-color: #1b1b24;
     overflow-y: scroll;
 }
+
 .send{
     margin-left: 10px;
 }
@@ -69,14 +70,23 @@ body{
 .show-text{
     margin-left: 20px;
 }
+.mini{
+    margin-left: 16px;
+    margin-right: 16px;
+    color: rgb(146, 141, 141);
+    font-size: 8pt;
+    display: block;
+    margin-bottom: 7px;
+}
 .speak{
     width: 100%;
     height: max-content;
     color: white;
     padding: 5pt;
     margin-top: 15px;
-    display: flex;
-    justify-content: right;
+    display: block;
+    text-align: right;
+    
 }
 .reply{
     width: 100%;
@@ -90,6 +100,7 @@ body{
     color: white;
     width: max-content;
     height:auto;
+    float: right;
     text-align: right;
     max-width: 70%;
     margin-right: 10px;

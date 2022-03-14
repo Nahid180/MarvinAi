@@ -41,6 +41,7 @@ def saveData():
     db.session.add(Marvin(speaker=speaker,reply=reply,tag=tag))
     db.session.commit()
     return redirect('/')
+    
 
 if __name__=="__main__":
     app.run(debug=True)

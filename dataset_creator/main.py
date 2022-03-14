@@ -5,7 +5,7 @@ import json
 
 app=Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://nahid:khan2019@localhost/marvin?charset=utf8mb4'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:khan2019@localhost/marvin?charset=utf8mb4'
 
 db=SQLAlchemy(app)
 
@@ -15,7 +15,7 @@ class Marvin(db.Model):
     reply=db.Column(db.Text)
     tag=db.Column(db.Text)
 
-with open("G:\\MarvinAi\\dataset_creator\\static\\config.json",'rb') as f:
+with open("/media/nahid/Projects/MarvinAi/dataset_creator/static/config.json",'rb') as f:
     file=json.load(f)
 
 @app.route('/')

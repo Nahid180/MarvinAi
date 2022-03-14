@@ -1,13 +1,13 @@
 import main
-import restore
+import dataset_creator.create as create
 
 print("Restore started.....")
 
-restore.db.drop_all()
-restore.db.create_all()
+create.db.drop_all()
+create.db.create_all()
 
 for i in main.Marvin.query.all():
-    restore.db.session.add(restore.Marvin(speaker=i.speaker,reply=i.reply,tag=i.tag))
-    restore.db.session.commit()
+    create.db.session.add(create.Marvin(speaker=i.speaker,reply=i.reply,tag=i.tag))
+    create.db.session.commit()
 
 print("Done restoring.....")

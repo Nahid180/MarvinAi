@@ -1,16 +1,11 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+import create
+import main
 
-restore=Flask(__name__)
+main.db.create_all()
 
-restore.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///G:\\MarvinAi\\dataset_creator\\marvin.db'
+for i in create.Marvin.query.all():
+    main.db.session.add(main.Marvin(speaker=i.speaker,reply=i.reply,tag=i.tag))
+    main.db.session.commit()
 
-db=SQLAlchemy(restore)
+print(main.Marvin.query.all())
 
-class Marvin(db.Model):
-    id=db.Column(db.Integer,primary_key=True)
-    speaker=db.Column(db.Text)
-    reply=db.Column(db.Text)
-    tag=db.Column(db.Text)
-
-print(Marvin.query.all())
